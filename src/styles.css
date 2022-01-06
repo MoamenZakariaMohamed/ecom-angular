@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    --text-color:rgb(48, 30, 30);
+    --bkg-color:#fff;
+    --btn-txt-color:white;
+}
+body.dark-theme{
+    --text-color:#eee;
+    --bkg-color:#0e0c0c;
+}
+body{
+    background: var(--bkg-color);
+}
+h1,h2,h3,h4,h5,h6,p{
+    color: var(--text-color);
+}
+

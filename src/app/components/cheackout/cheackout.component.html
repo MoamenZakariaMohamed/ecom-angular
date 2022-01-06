@@ -1,0 +1,42 @@
+<div class="container mt-5 px-5">
+    <div class="row ">
+        <div class="card p-3">
+            <h6 class="text-uppercase">Payment details</h6>
+            <div class="row justify-content-center mrow">
+                <div class="col-12"> <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" width="35px" height="35px" /> <img src="https://img.icons8.com/color/48/000000/visa.png" width="35px" height="35px" /> <img src="https://img.icons8.com/color/48/000000/paypal.png" width="35px" height="35px" /> </div>
+            </div>
+            <form class="form-card" #check= 'ngForm' >
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group"> <input type="text" ngModel class="form-control p-0" id="number" required><label class="form-control-placeholder p-0" for="number">CardNumber</label> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="form-group"> <input type="text"  class="form-control p-0" ngModel name="name" required>
+                            <label class="form-control-placeholder p-0" for="name">Cardholder'sName</label> </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-12">
+                        <div class="form-group"> <input type="text" ngModel class="form-control p-0" name="sdate" required>
+                            <label class="form-control-placeholder p-0" for="sdate">StartDate</label> </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <div class="form-group"> <input type="text" ngModel class="form-control p-0" name="expdate" required>
+                            <label class="form-control-placeholder p-0" for="expdate">ExpirationDate</label> </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <div class="form-group"> <input type="password" ngModel class="form-control p-0" name="passw" required>
+                            <label class="form-control-placeholder p-0" for="passw">CVV</label> </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-sm-12"> 
+                        <button type="button" class="btn btn-primary btn-block" (click)="onPay()" [disabled]="!check.valid" >Pay</button>
+                     </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

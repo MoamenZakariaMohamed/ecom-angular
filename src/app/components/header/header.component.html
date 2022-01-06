@@ -1,0 +1,27 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <div class="navbar-brand align-item-center d-flex">
+            <i class="fas fa-shipping-fast"  routerLink="/products" style="font-size: 30px; color: white;margin-left: 10px; cursor: pointer;">&nbsp;</i>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            
+            <form class="d-flex"  #f="ngForm">
+                <div class="input-group">
+                    <input type="text" class="form-control" [(ngModel)]="searchTerm"  (keyup)="search($event)" placeholder="Search" name="serach">
+                    <button type="button" class="btn btn-secondary"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <div class="navbar-nav">
+                <button class="darkmode" (click)="toggleDarkTheme()">{{darkTheme?'💡 Light':'🌙 Dark'}}</button>
+                <button class="btn btn-dark"  routerLink="/cart">
+                    <i style="font-size: 15px;" class="fas fa-cart-plus"></i>
+                    <div style="font-size: 10px;" class="badge bg-danger">{{totalPrudect}}</div>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>
